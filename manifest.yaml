@@ -1,0 +1,13 @@
+name: Prometheus Demo
+description: Small test during development
+tags: null
+initialize:
+  plugins:
+    prometheus-importer:
+      method: MyCustomPlugin
+      path: 'prometheus-importer'
+tree:
+  children:
+    child:
+      config:
+      inputs:
