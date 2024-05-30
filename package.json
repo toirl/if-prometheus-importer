@@ -1,6 +1,6 @@
 {
-  "name": "if-plugin-template",
-  "description": "Impact Framework plugins template.",
+  "name": "prometheus-importer",
+  "description": "Importer plugin to fetch data from Prometheus.",
   "version": "v0.1.0",
   "author": {
     "name": "Green Software Foundation",
