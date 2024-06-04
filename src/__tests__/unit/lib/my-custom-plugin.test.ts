@@ -1,9 +1,11 @@
 import {MyCustomPlugin} from '../../../lib/my-custom-plugin';
+import {newYourGlobalConfig} from '../../../lib/my-custom-plugin/types';
 
 describe('lib/my-custom-plugin: ', () => {
   describe('MyCustomPlugin(): ', () => {
     it('has metadata field.', () => {
-      const pluginInstance = MyCustomPlugin({});
+      const globalConfig = newYourGlobalConfig('http://localhost:9090');
+      const pluginInstance = MyCustomPlugin(globalConfig);
 
       expect(pluginInstance).toHaveProperty('metadata');
       expect(pluginInstance).toHaveProperty('execute');
@@ -13,7 +15,8 @@ describe('lib/my-custom-plugin: ', () => {
 
     describe('execute(): ', () => {
       it('applies logic on provided inputs array.', async () => {
-        const pluginInstance = MyCustomPlugin({});
+        const globalConfig = newYourGlobalConfig('http://localhost:9090');
+        const pluginInstance = MyCustomPlugin(globalConfig);
         const inputs = [{}];
 
         const response = await pluginInstance.execute(inputs, {});
