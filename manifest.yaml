@@ -6,6 +6,13 @@ initialize:
     prometheus-importer:
       global-config:
         url: 'localhost:9090'
+        start: '2024-05-28T11:20:04Z'
+        end: '2024-05-28T12:20:04Z'
+        step: 3600 # 1 hour in seconds
+        query:
+          - cpu-util
+          - mem-util
+          - mem-total
       method: MyCustomPlugin
       path: 'prometheus-importer'
 tree:
