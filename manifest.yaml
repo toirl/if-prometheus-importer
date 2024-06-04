@@ -4,10 +4,13 @@ tags: null
 initialize:
   plugins:
     prometheus-importer:
+      global-config:
+        url: 'localhost:9090'
       method: MyCustomPlugin
       path: 'prometheus-importer'
 tree:
   children:
     child:
-      config:
+      pipeline:
+        - prometheus-importer
       inputs:
