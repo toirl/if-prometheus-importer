@@ -12,6 +12,7 @@ export const MyCustomPlugin = (
    * Execute's strategy description here.
    */
   const execute = async (inputs: PluginParams[]): Promise<PluginParams[]> => {
+    console.log(globalConfig);
     return inputs.map(input => {
       // your logic here
       globalConfig;

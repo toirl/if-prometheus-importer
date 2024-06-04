@@ -5,7 +5,6 @@ export * from './lib';
 
 async function runPlugin() {
   const globalConfig = newYourGlobalConfig('http://localhost:9090');
-  console.log(globalConfig);
   const newModel = MyCustomPlugin(globalConfig);
   const usage = await newModel.execute([]);
   console.log(usage);
